@@ -1,0 +1,20 @@
+apiVersion: v1 
+kind: Pod
+metadata:
+  labels:
+    app: sql-pod
+  name: sql-pod
+spec:
+  containers:
+  - image: 269793566624.dkr.ecr.us-east-1.amazonaws.com/sqlrepo:latest
+    name: sql-pod
+    resources: {}
+    env:
+      - name: MYSQL_ROOT_PASSWORD
+        value: "123"
+    ports:
+      - name: sql-pod
+        containerPort: 3306
+        protocol: TCP
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always
