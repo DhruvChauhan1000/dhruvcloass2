@@ -16,8 +16,10 @@ chmod 777 init_kind.sh
     sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
     rm -f ./kubectl
     kind create cluster --config kind.yaml
+````
     
 # Step 2: Build and Deploy images into ECR Repo
 ```
 docker build -t <name> -f <name of dockerfile> .
 aws ecr create-repository --repository-name <name of repo> --image-scanning-configuration scanOnPush=true
+```
