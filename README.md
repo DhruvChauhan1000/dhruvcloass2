@@ -44,3 +44,24 @@ kubectl create -f < filename.yaml >
 ```
 kubectl port-forward < name of pod > 8081:8080 -n < namespace the pod is deployed in >
 ```
+## Verify the Running Status of Pods
+```
+kubectl get pods (For Default Namespace)
+kubectl get pods -n < namespace pod is deployed in >
+```
+## Verify Everything that is Running
+```
+kubectl get all (For Default Namespace)
+kubectl get all -n < namespace >
+```
+### Correct Git Push Sequence
+```
+git config --global user.name "YOUR_USER_NAME"
+git config --global user.email YOUR_EMAIL_ADDRESS
+git init
+git add . or git add <filename>
+git commit -m "MESSAGE"
+git add
+git remote add origin YOUR_GITREPO_HTTPS_ADDRESS
+git push -u origin main
+```
