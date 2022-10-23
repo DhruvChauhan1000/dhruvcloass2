@@ -20,6 +20,27 @@ chmod 777 init_kind.sh
     
 # Step 2: Build and Deploy images into ECR Repo
 ```
-docker build -t <name> -f <name of dockerfile> .
-aws ecr create-repository --repository-name <name of repo> --image-scanning-configuration scanOnPush=true
+docker build -t < name > -f <name of dockerfile> .
+aws ecr create-repository --repository-name < name of repo > --image-scanning-configuration scanOnPush=true
+```
+# Step 3: Deployment Sequence
+```
+1. Create SQL Pod in designated namespace
+2. Create SQL Service (ClusterIP)
+3. Create APP Service (NodePort)
+4. Create APP Pod 
+5. Create SQL Replica Set
+6. Create APP Replica Set
+7. Create SQL Deployment
+8. Create APP Deployment
+```
+# Extras:
+
+## Command to create the files from Step 3
+```
+kubectl create -f < filename.yaml >
+```
+## Command to do Port Forward
+```
+kubectl port-forward < name of pod > 8081:8080 -n < namespace the pod is deployed in >
 ```
