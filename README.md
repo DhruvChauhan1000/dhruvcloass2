@@ -1,6 +1,6 @@
 # Create K8s Cluster, Deploy containerized stateless applications using K8s manifests
 
-# Step 1: Install Cluster with Kind and Kubectl (init_kind.sh)
+# Step 1: Create Cluster
 ```
 chmod 777 init_kind.sh
 #!/bin/bash
