@@ -23,7 +23,7 @@ chmod 777 init_kind.sh
 docker build -t < name > -f <name of dockerfile> .
 aws ecr create-repository --repository-name < name of repo > --image-scanning-configuration scanOnPush=true
 ```
-# Step 3: Deployment Sequence
+# Step 3: My Deployment Sequence
 ```
 1. Create SQL Pod in designated namespace
 2. Create SQL Service (ClusterIP)
